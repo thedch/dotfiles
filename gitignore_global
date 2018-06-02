@@ -1,0 +1,14 @@
+# Lines that start with '#' are comments.
+# Daniel Hunter
+# July 11 2017
+.DS_Store
+*.o
+._*
+*.out
+*.zip
+*.swp
+
+# Python
+.ipynb_checkpoints/
+__pycache__/
+*.pyc

@@ -1,0 +1,7 @@
+[user]
+    email = officialdanielhunter@gmail.com
+    name = Daniel Hunter
+[core]
+    excludesfile = ~/.gitignore_global
+[push]
+    default = simple
