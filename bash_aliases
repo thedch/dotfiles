@@ -12,7 +12,6 @@ alias gdca='git diff --cached'
 alias gcmsg='git commit -m'
 alias ..='cd ..'
 alias c='echo "Use Ctrl+L!"'
-alias dots='git --git-dir=$HOME/.dots.git/ --work-tree=$HOME' # https://github.com/jaagr/dots
 
 export EDITOR='vim'
 
