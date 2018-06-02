@@ -10,7 +10,7 @@ dir=~/dotfiles # dotfiles directory
 olddir=~/dotfiles_old # old dotfiles backup directory
 
 # TODO: Just iterate through all files in the folder and make symlinks
-files="bashrc bash_aliases vimrc zshrc" # list of files/folders to symlink in homedir
+files="bashrc gitconfig gitignore_global bash_aliases vimrc zshrc" # list of files/folders to symlink in homedir
 
 ##########
 
