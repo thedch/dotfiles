@@ -18,6 +18,9 @@ cd $dir
 echo "...done"
 
 for dotfile in *; do
+    if [ -d "$dotfile" ]; then 
+        continue
+    fi 
     echo "Backing up and then linking $dotfile..."
     mv ~/.$dotfile $olddir
     ln -s  $dir/$dotfile ~/.$dotfile
