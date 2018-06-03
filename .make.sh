@@ -1,20 +1,13 @@
 #!/bin/bash
 ############################
 # .make.sh
-# This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
+# This script creates symlinks from the home directory to any desired dotfiles
 ############################
 
-########## Variables
+dir=$(pwd) # dotfiles directory
+olddir="$dir/.old" # old dotfiles backup directory
 
-dir=~/dotfiles # dotfiles directory
-olddir=~/dotfiles_old # old dotfiles backup directory
-
-# TODO: Just iterate through all files in the folder and make symlinks
-files="bashrc gitconfig gitignore_global bash_aliases vimrc zshrc" # list of files/folders to symlink in homedir
-
-##########
-
-# create dotfiles_old in homedir
+# create backup directory
 echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -p $olddir
 echo "...done"
@@ -24,10 +17,8 @@ echo "Changing to the $dir directory"
 cd $dir
 echo "...done"
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
-for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file ~/dotfiles_old/
-    echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/.$file
+for dotfile in *; do
+    echo "Backing up and then linking $dotfile..."
+    mv ~/.$dotfile $olddir
+    ln -s  $dir/$dotfile ~/.$dotfile
 done
