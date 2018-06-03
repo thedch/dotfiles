@@ -13,10 +13,6 @@ fi
 
 export PS1="\e[1;32m\w $ \e[m"
 
-if [ $WIN10 == 1 ]; then
-    export PATH="/home/Daniel/anaconda3/bin:$PATH"
-fi
-
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -41,3 +37,8 @@ HISTFILESIZE=2000
 # Case insensitive tab completion
 bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous on"
+
+if [ $WIN10 == 1 ]; then
+    export PATH="/home/Daniel/anaconda3/bin:$PATH"
+    cd /mnt/c/Users/Daniel-SSD/
+fi
