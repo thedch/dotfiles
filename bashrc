@@ -11,6 +11,12 @@ if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
 
+export PS1="\e[1;32m\w $ \e[m"
+
+if [ $WIN10 == 1 ]; then
+    export PATH="/home/Daniel/anaconda3/bin:$PATH"
+fi
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
