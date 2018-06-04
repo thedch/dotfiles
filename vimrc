@@ -1,7 +1,7 @@
 set nocompatible
 
 set term=ansi " Possibly delete this in W10
-colorscheme desert
+colorscheme late_evening
 
 syntax on
 
