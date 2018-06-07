@@ -11,7 +11,7 @@ if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
 
-export PS1="\e[1;32m\w $ \e[m"
+export PS1="\[\e[1;32m\]\w $ \[\e[m\]"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
