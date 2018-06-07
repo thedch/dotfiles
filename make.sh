@@ -34,6 +34,6 @@ for file in *; do
     should_ignore "$file"
     if [ $? -eq 0 ]; then
         mv ~/."$file" "$olddir"
-        ln -s --verbose "$dir"/"$file" ~/."$file"
+        ln -s "$dir"/"$file" ~/."$file"
     fi
 done
