@@ -16,7 +16,6 @@ export PS1="\[\e[1;32m\]\w $ \[\e[m\]"
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    # alias ls='ls --color=auto'
 fi
 
 # check the window size after each command and, if necessary,
@@ -42,3 +41,5 @@ if [ $WIN10 == 1 ]; then
     export PATH="/home/Daniel/anaconda3/bin:$PATH"
     cd /mnt/c/Users/Daniel-SSD/
 fi
+
+. /home/officialdanielhunter/anaconda3/etc/profile.d/conda.sh
