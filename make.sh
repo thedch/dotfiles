@@ -23,11 +23,6 @@ echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -p "$olddir"
 echo "...done"
 
-# change to the dotfiles directory
-echo "Changing to the $dir directory"
-cd "$dir"
-echo "...done"
-
 # iterate through all files in the currect directory, symlinking to ~ as appropriate
 for file in *; do
     should_ignore "$file"
