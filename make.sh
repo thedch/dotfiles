@@ -4,7 +4,6 @@
 # This script creates symlinks from the home directory to any desired dotfiles
 ############################
 
-
 # This function holds a "blacklist" of files that should not be symlinked
 should_ignore () {
     ignore="make.sh README.md"
@@ -33,6 +32,7 @@ echo "...done"
 for file in *; do
     should_ignore "$file"
     if [ $? -eq 0 ]; then
+	echo Linking "$file"...
         mv ~/."$file" "$olddir"
         ln -s "$dir"/"$file" ~/."$file"
     fi

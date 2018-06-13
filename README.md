@@ -9,6 +9,6 @@ Setup instructions:
 ```
 git clone https://github.com/thedch/dotfiles.git
 cd dotfiles
-chmod 700 .make.sh
-./.make.sh
+chmod 700 make.sh
+./make.sh
 ```

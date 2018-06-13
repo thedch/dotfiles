@@ -8,6 +8,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
+set updatetime=100 " Make git gutter update close to real time
 
 call vundle#end()            " required
 filetype plugin indent on    " required
