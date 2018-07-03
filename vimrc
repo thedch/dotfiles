@@ -24,7 +24,7 @@ set shiftwidth=4 " Indents will have a width of 4
 set softtabstop=4 " Sets the number of columns for a tab
 set expandtab " Expand tabs to spaces
 
-set number " Enable Line Numbers
+set number relativenumber " Enable Line Numbers
 set autoindent " Stays on current indent when no file-specific matching
 set showmatch " Highlight matching [{()}]
 
