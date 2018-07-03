@@ -11,7 +11,6 @@ alias gf='git fetch'
 alias gdca='git diff --cached'
 alias gcmsg='git commit -m'
 alias ..='cd ..'
-alias c='echo "Use Ctrl+L!"'
 
 export EDITOR='vim'
 

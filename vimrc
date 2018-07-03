@@ -8,13 +8,14 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'Valloric/YouCompleteMe'
 set updatetime=100 " Make git gutter update close to real time
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 set term=ansi " Possibly delete this in W10
-colorscheme late_evening
+" colorscheme late_evening
 
 syntax on
 
