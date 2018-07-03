@@ -39,7 +39,7 @@ fi
 
 # set up git plugins
 if [ -h ~/.vim ]; then # -h checks if it is a symbolic link
-    if [ ! -f ~/.vim/bundle ]; then
+    if [ ! -d ~/.vim/bundle ]; then # ! -d checks if the directory does not exist
         echo "Setting up git plugins..."
         ./setup_vim.sh
     fi
