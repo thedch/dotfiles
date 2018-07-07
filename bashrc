@@ -41,5 +41,3 @@ if [ $WIN10 == 1 ]; then
     export PATH="/home/Daniel/anaconda3/bin:$PATH"
     cd /mnt/c/Users/Daniel-SSD/
 fi
-
-. /home/officialdanielhunter/anaconda3/etc/profile.d/conda.sh
