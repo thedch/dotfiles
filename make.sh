@@ -4,7 +4,7 @@
 
 # This function holds a "blacklist" of files that should not be symlinked
 should_ignore () {
-    ignore="make.sh README.md"
+    ignore="make.sh README.md setup_vim.sh"
     for word in $ignore; do
         if [ "$1" == "$word" ]; then
             return 1 # ignore this file!
@@ -31,7 +31,7 @@ else
         should_ignore "$file"
         if [ $? -eq 0 ]; then
             echo Linking "$file"...
-            [ -e ~/."$file" ] mv ~/."$file" "$olddir"
+            [ -e ~/."$file" ] && mv ~/."$file" "$olddir"
             ln -s "$dir"/"$file" ~/."$file"
         fi
     done
