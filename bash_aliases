@@ -41,3 +41,13 @@ if hostname | grep -q DESKTOP; then
 else
     export WIN10=0
 fi
+
+# Usage: `joblog 6166`
+joblog () {
+    less /mnt/nfs/run/slurm-"$1".out
+}
+
+# Case insensitive tab completion
+bind "set completion-ignore-case on"
+bind "set show-all-if-ambiguous on"
+
