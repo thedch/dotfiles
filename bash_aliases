@@ -49,6 +49,11 @@ joblog () {
 }
 
 # Case insensitive tab completion
-bind "set completion-ignore-case on"
-bind "set show-all-if-ambiguous on"
-
+if [ -z "$BASH" ]; then
+    # The bash variable is empty, you're probably in zsh. Do nothing.
+    : # ":" means do nothing
+else
+    # Run bash specific commands
+    bind "set completion-ignore-case on"
+    bind "set show-all-if-ambiguous on"
+fi
