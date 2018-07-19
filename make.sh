@@ -22,10 +22,12 @@ mkdir -p "$olddir"
 echo "...done"
 
 if [ $# -gt 0 ]; then
+    # TODO: Check if files exists
     echo Linking "$1"...
     [ -e ~/."$1" ] && mv ~/."$1" "$olddir" # check if files exists, if so, back it up
     ln -s "$dir"/"$1" ~/."$1"
 else
+    # TODO: Make user pass in "all" as first arg
     # iterate through all files in the currect directory, symlinking to ~ as appropriate
     for file in *; do
         should_ignore "$file"

@@ -11,6 +11,7 @@ alias gf='git fetch'
 alias gdca='git diff --cached'
 alias gcmsg='git commit -m'
 alias ..='cd ..'
+alias did="vim +'normal Go' +'r!date' ~/did.txt"
 
 export EDITOR='vim'
 
