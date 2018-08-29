@@ -48,6 +48,15 @@ joblog () {
     less /mnt/nfs/run/slurm-"$1".out
 }
 
+jobinfo () {
+    cat /mnt/nfs/run/"$1"/metadata.txt | jq
+}
+
+# Launches tensorboard in the given job directory
+tb () {
+    tensorboard --logdir /mnt/nfs/run/"$1" --port 1337
+}
+
 # Case insensitive tab completion
 if [ -z "$BASH" ]; then
     # The bash variable is empty, you're probably in zsh. Do nothing.
