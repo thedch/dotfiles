@@ -29,3 +29,5 @@ set autoindent " Stays on current indent when no file-specific matching
 set showmatch " Highlight matching [{()}]
 
 set background=dark
+
+nnoremap <Tab> :tabnext<CR> " Pressing tab will cycle through open tabs
