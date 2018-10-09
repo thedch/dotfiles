@@ -8,6 +8,7 @@
 *.zip
 *.swp
 .vscode
+tags
 
 # Python
 .ipynb_checkpoints/
