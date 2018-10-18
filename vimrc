@@ -14,10 +14,8 @@ set updatetime=100 " Make git gutter update close to real time
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-set term=ansi " Possibly delete this in W10
-" colorscheme late_evening
-
 syntax on
+colorscheme desert
 
 set tabstop=4 " The width of a tab is set to 4.
 set shiftwidth=4 " Indents will have a width of 4
@@ -65,5 +63,3 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
-
-set term=xterm " Make {vim, git diff, etc} clear the screen on exit instead of leaving artifacts
