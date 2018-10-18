@@ -14,6 +14,12 @@ should_ignore () {
 }
 
 dir=$(pwd) # dotfiles directory
+base_dir=$(basename "$dir")
+if [[ ! $base_dir == "dotfiles" ]]; then
+    echo "ERROR: Please run this script from the dotfiles directory"
+    exit 1
+fi
+
 olddir="$dir/.old" # old dotfiles backup directory
 
 # create backup directory
