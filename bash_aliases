@@ -75,7 +75,7 @@ cudaviz () {
         echo "Usage: cudaviz 0 [OR] cudaviz 0,1";
     else
         export CUDA_VISIBLE_DEVICES="$1"
-        echo ">>> echo \$CUDA_VISIBLE_DEVICES"
+        echo "echo \$CUDA_VISIBLE_DEVICES"
         echo "$CUDA_VISIBLE_DEVICES"
     fi
 }
