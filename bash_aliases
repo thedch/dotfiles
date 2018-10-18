@@ -12,6 +12,7 @@ alias gdca='git diff --cached'
 alias gcmsg='git commit -m'
 alias ..='cd ..'
 alias type='type -a'
+alias ack='echo "Searching only Python files..."; ack --python'
 
 export EDITOR='vim'
 
@@ -55,6 +56,28 @@ jobinfo () {
 # Launches tensorboard in the given job directory
 tb () {
     tensorboard --logdir /mnt/nfs/run/"$1" --port 1337
+}
+
+# Experiment Compare: see the diff between two slurm tags
+# Usage: expcmp 6886 6889 (or any other two slurm tags)
+expcmp () {
+    if [[ "$#" != 2 ]]; then
+        echo "Usage: expcmp 6886 6889";
+    else
+        # exclude markdown and jupyter notebook files in the diff
+        git diff slurm-"$1" slurm-"$2" -- . ':(exclude)*.md' ':(exclude)*.ipynb';
+    fi
+}
+
+# Used to set cuda visible devices
+cudaviz () {
+    if [[ "$#" != 1 ]]; then
+        echo "Usage: cudaviz 0 [OR] cudaviz 0,1";
+    else
+        export CUDA_VISIBLE_DEVICES="$1"
+        echo ">>> echo \$CUDA_VISIBLE_DEVICES"
+        echo "$CUDA_VISIBLE_DEVICES"
+    fi
 }
 
 # Case insensitive tab completion

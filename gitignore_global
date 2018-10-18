@@ -9,6 +9,8 @@
 *.swp
 .vscode
 tags
+.cache
+*.h5
 
 # Python
 .ipynb_checkpoints/
