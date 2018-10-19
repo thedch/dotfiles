@@ -13,6 +13,7 @@ alias gcmsg='git commit -m'
 alias ..='cd ..'
 alias type='type -a'
 alias ack='echo "Searching only Python files..."; ack --python'
+alias tree='echo "(ignoring __pycache__)"; tree -I '__pycache__''
 
 export EDITOR='vim'
 
