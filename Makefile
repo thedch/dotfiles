@@ -5,14 +5,14 @@ MAKEFILE_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 dots: $(DOTFILES)
 	git update-index --skip-worktree machine_specific # ignore changes forever
 
-clean: # interactively remove all dotfiles in the home directory
-	rm -i $(addprefix ~/., $(DOTFILES))
+$(DOTFILES): # for each dotfile, symlink it to the home directory
+	@echo ln -sv $(MAKEFILE_PATH)/$@ ~/.$@
 
 vimsetup: ~/.vim
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim \
 	vim +PluginInstall +qall
 
-$(DOTFILES): # for each dotfile, symlink it to the home directory
-	@echo ln -sv $(MAKEFILE_PATH)/$@ ~/.$@
+clean: # interactively remove all dotfiles in the home directory
+	rm -i $(addprefix ~/., $(DOTFILES))
 
 .PHONY: dots clean $(DOTFILES)
