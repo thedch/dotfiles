@@ -6,7 +6,7 @@ dots: $(DOTFILES)
 	git update-index --skip-worktree machine_specific # ignore changes forever
 
 $(DOTFILES): # for each dotfile, symlink it to the home directory
-	@ln -sv $(MAKEFILE_PATH)/$@ ~/.$@
+	@ln -isv $(MAKEFILE_PATH)/$@ ~/.$@
 
 vimsetup: ~/.vim
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim \
