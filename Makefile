@@ -1,4 +1,4 @@
-EXCLUDED_DOTFILES := Makefile make.sh setup_vim.sh README.md
+EXCLUDED_DOTFILES := Makefile README.md
 DOTFILES := $(filter-out $(EXCLUDED_DOTFILES), $(wildcard *))
 MAKEFILE_PATH := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
