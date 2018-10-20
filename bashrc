@@ -30,8 +30,7 @@ HISTFILESIZE=20000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-export PS1="\[\e[1;32m\]\w $ \[\e[m\]"
-# PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+export PS1="\u@\h:\w $ "
 
 # Case insensitive tab completion
 bind "set completion-ignore-case on"

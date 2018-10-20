@@ -45,30 +45,6 @@ else
     export WIN10=0
 fi
 
-# Usage: `joblog 6166`
-joblog () {
-    less /mnt/nfs/run/slurm-"$1".out
-}
-
-jobinfo () {
-    cat /mnt/nfs/run/"$1"/metadata.txt | jq
-}
-
-# Launches tensorboard in the given job directory
-tb () {
-    tensorboard --logdir /mnt/nfs/run/"$1" --port 1337
-}
-
-# Experiment Compare: see the diff between two slurm tags
-# Usage: expcmp 6886 6889 (or any other two slurm tags)
-expcmp () {
-    if [[ "$#" != 2 ]]; then
-        echo "Usage: expcmp 6886 6889";
-    else
-        # exclude markdown and jupyter notebook files in the diff
-        git diff slurm-"$1" slurm-"$2" -- . ':(exclude)*.md' ':(exclude)*.ipynb';
-    fi
-}
 
 # Used to set cuda visible devices
 cudaviz () {
@@ -80,13 +56,3 @@ cudaviz () {
         echo "$CUDA_VISIBLE_DEVICES"
     fi
 }
-
-# Case insensitive tab completion
-if [ -z "$BASH" ]; then
-    # The bash variable is empty, you're probably in zsh. Do nothing.
-    : # ":" means do nothing
-else
-    # Run bash specific commands
-    bind "set completion-ignore-case on"
-    bind "set show-all-if-ambiguous on"
-fi
