@@ -1,6 +1,6 @@
-SHELL:=/bin/bash
 EXCLUDED_DOTFILES := Makefile make.sh setup_vim.sh README.md
 DOTFILES := $(filter-out $(EXCLUDED_DOTFILES), $(wildcard *))
+MAKEFILE_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 
 dots: $(DOTFILES)
 
@@ -12,6 +12,6 @@ vimsetup: ~/.vim
 	vim +PluginInstall +qall
 
 $(DOTFILES): # for each dotfile, symlink it to the home directory
-	@echo ln -sv $@ ~/.$@
+	@echo ln -sv $(MAKEFILE_PATH)/$@ ~/.$@
 
 .PHONY: dots clean $(DOTFILES)

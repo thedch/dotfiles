@@ -11,6 +11,10 @@ if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
 
+if [ -f ~/.machine_specific ]; then
+    source ~/.machine_specific
+fi
+
 export PS1="\[\e[1;32m\]\w $ \[\e[m\]"
 
 # enable color support of ls and also add handy aliases

@@ -50,3 +50,6 @@ if [ -f ~/.bash_profile ]; then
     source ~/.bash_profile
 fi
 
+if [ -f ~/.machine_specific ]; then
+    source ~/.machine_specific
+fi
