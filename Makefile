@@ -3,6 +3,7 @@ DOTFILES := $(filter-out $(EXCLUDED_DOTFILES), $(wildcard *))
 MAKEFILE_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 
 dots: $(DOTFILES)
+	git update-index --skip-worktree machine_specific # ignore changes forever
 
 clean: # interactively remove all dotfiles in the home directory
 	rm -i $(addprefix ~/., $(DOTFILES))
