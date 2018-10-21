@@ -3,6 +3,7 @@
 # Mostly copied from oh-my-zsh so I can easily work on remote bash shells
 # without doing a full install
 alias gst='git status'
+alias gs='gst'
 alias ga='git add'
 alias gaa='git add --all'
 alias gau='git add --update'
