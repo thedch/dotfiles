@@ -1,5 +1,5 @@
-EXCLUDED_DOTFILES := Makefile README.md
-DOTFILES := $(filter-out $(EXCLUDED_DOTFILES), $(wildcard *))
+EXCLUDED_FILES := Makefile README.md
+DOTFILES := $(filter-out $(EXCLUDED_FILES), $(wildcard *))
 MAKEFILE_PATH := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
 dots: $(DOTFILES)
