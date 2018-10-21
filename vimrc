@@ -34,7 +34,7 @@ nnoremap <Tab> :tabnext<CR> " Pressing tab will cycle through open tabs
 " Leave vims active directory at the root of your project
 " Use :find [filename]
 set path=**  " overwrite path (default has /usr/include)
-set wildignore+=*.pyc*,*DS_Store*,*.ipynb
+set wildignore+=*.pyc*,*DS_Store*,*.ipynb,**/__pycache__
 
 " Display all matching files when we tab complete
 set wildmenu
