@@ -35,8 +35,3 @@ export PS1="\u@\h:\w $ "
 # Case insensitive tab completion
 bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous on"
-
-if [ $WIN10 == 1 ]; then
-    export PATH="/home/Daniel/anaconda3/bin:$PATH"
-    cd /mnt/c/Users/Daniel-SSD/
-fi

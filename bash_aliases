@@ -13,7 +13,7 @@ alias gdca='git diff --cached'
 alias gcmsg='git commit -m'
 alias ..='cd ..'
 alias type='type -a'
-alias ack='echo "Searching only Python files..."; ack --python'
+alias pack='echo "Searching only Python files..."; ack --python'
 alias tree='echo "(ignoring __pycache__)"; tree -I '__pycache__''
 
 export EDITOR='vim'
@@ -39,12 +39,6 @@ git_current_branch () {
     fi
     echo ${ref#refs/heads/}
 }
-
-if hostname | grep -q DESKTOP; then
-    export WIN10=1
-else
-    export WIN10=0
-fi
 
 
 # Used to set cuda visible devices
