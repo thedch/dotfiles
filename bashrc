@@ -35,3 +35,5 @@ export PS1="\u@\h:\w $ "
 # Case insensitive tab completion
 bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous on"
+
+stty -ixon # ctrl-S usually disables terminal (turns off control flow). This disable the disabling.
