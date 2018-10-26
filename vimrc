@@ -6,6 +6,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
+Bundle 'takac/vim-hardtime'
 set updatetime=100 " Make git gutter update close to real time
 
 call vundle#end()            " required
@@ -61,5 +62,9 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-" Autosave on focus lost
-au FocusLost * :w
+" Autosave on focus lost, suppress errors for readonly / unnamed files
+" :au FocusLost * !silent update
+
+set scrolloff=10 " Keep cursor 10 lines from bottom / top of screen
+
+let g:hardtime_default_on = 1 " No spamming hjkl, use vim correctly like a good developer
