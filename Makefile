@@ -1,3 +1,4 @@
+SHELL := /bin/bash
 EXCLUDED_FILES := Makefile README.md
 DOTFILES := $(filter-out $(EXCLUDED_FILES), $(wildcard *))
 MAKEFILE_PATH := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
@@ -16,8 +17,8 @@ $(DOTFILES): # for each dotfile, symlink it to the home directory
 	@ln -$(LN_FLAGS) $(MAKEFILE_PATH)/$@ ~/.$@
 
 vimsetup: vim vimrc
-	[ ! -e ~/.vim/bundle/Vundle.vim ] && \ # git clone only if file does not exist
-	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim; \
+	if [ ! -e ~/.vim/bundle/Vundle.vim ]; then \
+	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim; fi; \
 	vim +PluginInstall +qall
 
 clean: # remove all dotfiles in the home directory
