@@ -1,6 +1,17 @@
 set nocompatible " be iMproved, required
 filetype off " required
 
+let vundle_not_installed=1
+let vundle_readme=expand('~/.vim/bundle/Vundle.vim/README.md')
+if !filereadable(vundle_readme)
+    echo "Installing Vundle..."
+    echo ""
+    silent !mkdir -p ~/.vim/bundle
+    silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
+    let vundle_not_installed=0
+endif
+
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
@@ -11,6 +22,12 @@ set updatetime=100 " Make git gutter update close to real time
 
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+if vundle_not_installed == 0
+    echo "Installing Plugins, please ignore key map error messages"
+    echo ""
+    :PluginInstall
+endif
 
 syntax on
 colorscheme desert

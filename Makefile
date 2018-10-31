@@ -16,13 +16,7 @@ dots: $(DOTFILES)
 $(DOTFILES): # for each dotfile, symlink it to the home directory
 	@ln -$(LN_FLAGS) $(MAKEFILE_PATH)/$@ ~/.$@
 
-vimsetup: vim vimrc
-	if [ ! -e ~/.vim/bundle/Vundle.vim ]; then \
-	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim; fi; \
-	vim +PluginInstall +qall
-
 clean: # remove all dotfiles in the home directory
 	@rm -v $(addprefix ~/., $(DOTFILES))
 
-.PHONY: dots $(DOTFILES) vimsetup clean
-
+.PHONY: dots $(DOTFILES) clean
