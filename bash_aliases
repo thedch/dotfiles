@@ -47,6 +47,9 @@ git_current_branch () {
 cudaviz () {
     if [[ "$#" != 1 ]]; then
         echo "Usage: cudaviz 0 [OR] cudaviz 0,1";
+        echo "For convenience:"
+        echo "echo \$CUDA_VISIBLE_DEVICES"
+        echo "$CUDA_VISIBLE_DEVICES"
     else
         export CUDA_VISIBLE_DEVICES="$1"
         echo "echo \$CUDA_VISIBLE_DEVICES"
