@@ -18,10 +18,11 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 Bundle 'takac/vim-hardtime'
+Plugin 'zxqfl/tabnine-vim'
 set updatetime=100 " Make git gutter update close to real time
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end() " required
+filetype plugin indent on " required
 
 if vundle_not_installed == 0
     echo "Installing Plugins, please ignore key map error messages"
