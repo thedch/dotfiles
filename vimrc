@@ -2,7 +2,7 @@ set nocompatible " be iMproved, required
 filetype off " required
 
 let vundle_not_installed=1
-let vundle_readme=expand('~/.vim/bundle/Vundle.vim/README.md')
+let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
 if !filereadable(vundle_readme)
     echo "Installing Vundle..."
     echo ""
@@ -12,7 +12,7 @@ if !filereadable(vundle_readme)
 endif
 
 
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
