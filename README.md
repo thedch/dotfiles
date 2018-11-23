@@ -1,15 +1,14 @@
-# My Dotfiles
+# Dotfiles
 
-My commonly used dotfiles for bash, git, and zsh.
+My commonly used dotfiles for bash, git, vim, zsh, etc.
 
-Script loosely based on [Michael Smalley's post](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/).
+A beginner friendly description of the Makefile can be found [here]
+(https://danielhunter.io/dotfile-management/)
 
-Setup instructions:
+## Installation
 
-```
+```shell
 git clone https://github.com/thedch/dotfiles.git
 cd dotfiles
-git clone https://github.com/VundleVim/Vundle.vim.git ./vim/bundle/Vundle.vim && vim +PluginInstall +qall
-chmod 700 make.sh
-./make.sh
+make
 ```
