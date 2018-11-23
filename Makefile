@@ -3,18 +3,11 @@ EXCLUDED_FILES := Makefile README.md
 DOTFILES := $(filter-out $(EXCLUDED_FILES), $(wildcard *))
 MAKEFILE_PATH := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
-OS := $(shell uname)
-ifeq ($(OS), Linux)
-	LN_FLAGS="svfn"
-else ifeq ($(OS), Darwin)
-	LN_FLAGS="svfh"
-endif
-
 dots: $(DOTFILES)
 	git update-index --skip-worktree machine_specific # ignore changes forever
 
 $(DOTFILES): # for each dotfile, symlink it to the home directory
-	@ln -$(LN_FLAGS) $(MAKEFILE_PATH)/$@ ~/.$@
+	@ln -svfn $(MAKEFILE_PATH)/$@ ~/.$@
 
 clean: # remove all dotfiles in the home directory
 	@rm -v $(addprefix ~/., $(DOTFILES))
