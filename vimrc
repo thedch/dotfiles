@@ -88,3 +88,8 @@ set scrolloff=10 " Keep cursor 10 lines from bottom / top of screen
 let g:hardtime_default_on = 1 " No spamming hjkl, use vim correctly like a good developer
 
 set backspace=indent,eol,start " Enable backspace on MacOS
+
+" I use Ctrl-A to switch tmux panes, and often accidentally increment numbers
+" Let's disable that
+map <C-a> <Nop>
+map <C-x> <Nop>
