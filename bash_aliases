@@ -17,6 +17,7 @@ alias pack='echo "Searching only Python files..."; ack --python'
 alias tree='echo "(ignoring __pycache__)"; tree -I '__pycache__''
 alias l='ls -l'
 alias python='python3'
+alias temp='vcgencmd measure_temp'
 
 export EDITOR='vim'
 

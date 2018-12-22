@@ -5,5 +5,5 @@
     excludesfile = ~/.gitignore_global
 [push]
     default = current
-[url "ssh://git@github.com/"]
-    insteadOf = https://github.com/
+# [url "ssh://git@github.com/"]
+    # insteadOf = https://github.com/
