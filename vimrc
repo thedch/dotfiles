@@ -64,7 +64,7 @@ command! MakeTags !ctags -R .
 :set ignorecase " Case insensitive file searching
 
 " Jump into file finding mode when I press ctrl-P
-nnoremap <C-P> :find
+nnoremap <C-P> :find 
 
 " File Browing
 let g:netrw_banner=0 " Disable annoying banner
