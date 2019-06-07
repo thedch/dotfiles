@@ -93,3 +93,5 @@ set backspace=indent,eol,start " Enable backspace on MacOS
 " Let's disable that
 map <C-a> <Nop>
 map <C-x> <Nop>
+
+set synmaxcol=140 " Long lines make Vim slow down, this seems to mitigate the issue
