@@ -9,3 +9,5 @@
     # insteadOf = https://github.com/
 [grep]
 	lineNumber = true
+[pager]
+	branch = false
