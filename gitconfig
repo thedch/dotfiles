@@ -1,6 +1,6 @@
 [user]
-    email = officialdanielhunter@gmail.com
-    name = Daniel Hunter
+    email = thedch@protonmail.com
+    name = Daniel H
 [core]
     excludesfile = ~/.gitignore_global
 [push]
@@ -11,3 +11,8 @@
 	lineNumber = true
 [pager]
 	branch = false
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
