@@ -18,7 +18,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 Bundle 'takac/vim-hardtime'
-Plugin 'zxqfl/tabnine-vim'
+Bundle 'ctrlpvim/ctrlp.vim'
+" Plugin 'zxqfl/tabnine-vim'
 set updatetime=100 " Make git gutter update close to real time
 
 call vundle#end() " required
@@ -64,9 +65,10 @@ command! MakeTags !ctags -R .
 :set ignorecase " Case insensitive file searching
 
 " Jump into file finding mode when I press ctrl-P
-nnoremap <C-P> :find 
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
-" File Browing
+" File Browsing
 let g:netrw_banner=0 " Disable annoying banner
 let g:netrw_browse_split=4 " open in prior window
 let g:altv=1 " open splits to the right
@@ -94,6 +96,8 @@ set backspace=indent,eol,start " Enable backspace on MacOS
 map <C-a> <Nop>
 map <C-x> <Nop>
 
-set synmaxcol=140 " Long lines make Vim slow down, this seems to mitigate the issue
+" set synmaxcol=140 " Long lines make Vim slow down, this seems to mitigate the issue
 
 set encoding=utf-8
+
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
