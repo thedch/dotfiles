@@ -16,6 +16,7 @@ alias type='type -a'
 alias pack='echo "Searching only Python files..."; ack --python'
 alias tree='echo "(ignoring __pycache__)"; tree -I '__pycache__''
 alias ll='ls -lAh'
+alias l='ls -lh'
 alias python='python3'
 alias temp='vcgencmd measure_temp' # for raspi
 

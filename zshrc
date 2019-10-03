@@ -49,3 +49,7 @@ fi
 if [ -f ~/.machine_specific ]; then
     source ~/.machine_specific
 fi
+
+if [ -f ~/.bash_profile ]; then
+    source ~/.bash_profile # conda tends to dump stuff here that's needed
+fi
