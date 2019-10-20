@@ -22,29 +22,6 @@ alias temp='vcgencmd measure_temp' # for raspi
 
 export EDITOR='vim'
 
-ggp () {
-    if [[ "$#" != 0 ]] && [[ "$#" != 1 ]]
-    then
-        git push origin "${*}"
-    else
-        [[ "$#" == 0 ]] && local b="$(git_current_branch)"
-        git push origin "${b:=$1}"
-    fi
-}
-
-git_current_branch () {
-    local ref
-    ref=$(command git symbolic-ref --quiet HEAD 2> /dev/null)
-    local ret=$?
-    if [[ $ret != 0 ]]
-    then
-        [[ $ret == 128 ]] && return
-        ref=$(command git rev-parse --short HEAD 2> /dev/null)  || return
-    fi
-    echo ${ref#refs/heads/}
-}
-
-
 # Used to set cuda visible devices
 cudaviz () {
     if [[ "$#" != 1 ]]; then
@@ -57,4 +34,8 @@ cudaviz () {
         echo "echo \$CUDA_VISIBLE_DEVICES"
         echo "$CUDA_VISIBLE_DEVICES"
     fi
+}
+
+ggp () { # git grep, search only python files
+    git grep "$@" -- '*.py'
 }
