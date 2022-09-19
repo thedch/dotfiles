@@ -1,12 +1,10 @@
 [user]
-    email = thedch@protonmail.com
-    name = Daniel H
+    email = 13357734+thedch@users.noreply.github.com
+    name = Daniel
 [core]
     excludesfile = ~/.gitignore_global
 [push]
     default = current
-# [url "ssh://git@github.com/"]
-    # insteadOf = https://github.com/
 [grep]
 	lineNumber = true
 [pager]
