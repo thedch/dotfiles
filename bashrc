@@ -1,5 +1,3 @@
-# .bashrc file by Daniel Hunter, copied from all across the internet.
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
