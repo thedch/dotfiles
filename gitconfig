@@ -3,6 +3,7 @@
     name = Daniel
 [core]
     excludesfile = ~/.gitignore_global
+	pager = less -+F
 [push]
     default = current
 [grep]
@@ -14,3 +15,5 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+[init]
+	defaultBranch = master
