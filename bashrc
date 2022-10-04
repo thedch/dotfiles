@@ -4,11 +4,6 @@ case $- in
       *) return;;
 esac
 
-# Load a dedicated bash alias file
-if [ -f ~/.bash_aliases ]; then
-    source ~/.bash_aliases
-fi
-
 if [ -f ~/.machine_specific ]; then
     source ~/.machine_specific
 fi
