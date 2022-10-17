@@ -3,7 +3,7 @@
     name = Daniel
 [core]
     excludesfile = ~/.gitignore_global
-    pager = less -+F
+    pager = less -+F -+X
 [push]
     default = current
 [grep]
