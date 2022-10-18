@@ -11,7 +11,6 @@ if !filereadable(vundle_readme)
     let vundle_not_installed=0
 endif
 
-
 set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
@@ -60,6 +59,7 @@ set wildmenu
 set laststatus=2 " Status bar always visible
 set statusline+=%F " Show filename in status bar
 
+" Must be exuberant-ctags, not just regular ctags (annoying)
 command! MakeTags !ctags -R .
 
 :set ignorecase " Case insensitive file searching
@@ -73,17 +73,6 @@ let g:netrw_banner=0 " Disable annoying banner
 let g:netrw_browse_split=4 " open in prior window
 let g:altv=1 " open splits to the right
 let netrw_liststyle=3 " Tree view
-
-" Highlight trailing whitespace, but not when in insert mode
-" highlight ExtraWhitespace ctermbg=red guibg=red
-" match ExtraWhitespace /\s\+$/
-" autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-" autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-" autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-" autocmd BufWinLeave * call clearmatches()
-
-" Autosave on focus lost, suppress errors for readonly / unnamed files
-" :au FocusLost * !silent update
 
 set scrolloff=10 " Keep cursor 10 lines from bottom / top of screen
 

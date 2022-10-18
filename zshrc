@@ -24,17 +24,6 @@ if [ -f ~/.bash_profile ]; then
     source ~/.bash_profile
 fi
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/daniel/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/daniel/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/daniel/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/daniel/miniconda3/bin:$PATH"
-    fi
+if [ -f ~/.machine_specific ]; then
+    source ~/.machine_specific
 fi
-unset __conda_setup
-# <<< conda initialize <<<

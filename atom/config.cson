@@ -1,10 +1,4 @@
 "*":
-  "autocomplete-plus":
-    fileBlacklist: [
-      "*.txt"
-      "*.md"
-      ""
-    ]
   core:
     audioBeep: false
     disabledPackages: [
