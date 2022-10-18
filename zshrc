@@ -4,7 +4,7 @@ export TERM="xterm-256color"
 export ZSH="$HOME/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="af-magic" # Using 14 pt Meslo LG S Regular
+ZSH_THEME="kolo"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
