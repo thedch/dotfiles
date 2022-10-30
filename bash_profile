@@ -17,3 +17,4 @@ export EDITOR='vim'
 ggp () { # git grep, search only python files
     git grep "$@" -- '*.py'
 }
+
