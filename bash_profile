@@ -18,3 +18,4 @@ ggp () { # git grep, search only python files
     git grep "$@" -- '*.py'
 }
 
+export PATH="${HOME}/.local/bin:${PATH}"
