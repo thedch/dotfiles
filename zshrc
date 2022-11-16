@@ -20,8 +20,8 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-if [ -f ~/.bash_profile ]; then
-    source ~/.bash_profile
+if [ -f ~/.common_aliases ]; then
+    source ~/.common_aliases
 fi
 
 if [ -f ~/.machine_specific ]; then

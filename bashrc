@@ -8,8 +8,8 @@ if [ -f ~/.machine_specific ]; then
     source ~/.machine_specific
 fi
 
-if [ -f ~/.bash_profile ]; then
-    source ~/.bash_profile
+if [ -f ~/.common_aliases ]; then
+    source ~/.common_aliases
 fi
 
 # don't put duplicate lines or lines starting with space in the history.

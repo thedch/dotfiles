@@ -16,7 +16,10 @@ if __name__ == '__main__':
         src_path = Path.home() / ('.' + dst_path.name)
         if src_path.exists():
             if src_path.resolve() != dst_path:
-                print(f'Skipping {dst_path.name}')
+                print(f'Skipping {dst_path.name} because it already exists, will not overwrite')
+            else:
+                print(f'{dst_path.name} already linked')
             continue
 
+        print(f'Linking {dst_path.name}')
         src_path.symlink_to(dst_path)
